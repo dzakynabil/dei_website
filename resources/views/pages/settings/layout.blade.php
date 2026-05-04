@@ -1,26 +1,26 @@
 <x-layouts::app :title="__('Home')">
-    <div class="bg-[#f8f2ea] text-[#1f1a17]">
+    <div class="home-page text-[#1f1a17]">
         <section class="mx-auto max-w-7xl px-6 py-10 lg:py-16">
             <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
                 <div>
-                    <p class="text-sm font-semibold uppercase tracking-[0.28em] text-[#b46a1c]">Culinary Atelier</p>
+                    <p class="text-sm font-semibold uppercase tracking-[0.28em] text-[#9d5a13]">Culinary Atelier</p>
                     <h1 class="mt-4 max-w-2xl text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl">
-                        Find <span class="text-[#b46a1c]">Affordable</span> Food Near You
+                        Find <span class="text-[#9d5a13]">Affordable</span> Food Near You
                     </h1>
-                    <p class="mt-5 max-w-xl text-lg leading-8 text-[#5d5248]">
+                    <p class="mt-5 max-w-xl text-lg leading-8 text-[#6a5b51]">
                         A sensory guide helping migrants and travelers discover authentic local flavors without breaking the bank. Your digital kitchen table awaits.
                     </p>
 
                     <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                        <label class="flex min-w-0 flex-1 items-center gap-3 rounded-full border border-[#eadbc9] bg-white px-4 py-3 shadow-sm">
-                            <span class="text-[#b46a1c]">⌖</span>
+                        <label class="home-pill flex min-w-0 flex-1 items-center gap-3 px-4 py-3">
+                            <span class="text-[#9d5a13]">⌖</span>
                             <span class="text-sm text-[#8c7f72]">Where are you eating?</span>
                         </label>
-                        <label class="flex items-center gap-3 rounded-full border border-[#eadbc9] bg-white px-4 py-3 shadow-sm sm:w-[180px]">
-                            <span class="text-[#b46a1c]">$</span>
+                        <label class="home-pill flex items-center gap-3 px-4 py-3 sm:w-[180px]">
+                            <span class="text-[#9d5a13]">$</span>
                             <span class="text-sm text-[#8c7f72]">Budget</span>
                         </label>
-                        <button class="rounded-full bg-[#b46a1c] px-7 py-3 font-semibold text-white shadow-lg shadow-[#b46a1c]/25 transition hover:bg-[#9f5d17]">
+                        <button class="home-btn rounded-full px-7 py-3 font-semibold text-white transition">
                             Search
                         </button>
                     </div>
@@ -28,8 +28,8 @@
 
                 <div class="grid gap-4 sm:grid-cols-2">
                     {{-- Put your image here: public/images/home/hero-dish-1.jpg --}}
-                    <div class="relative h-72 overflow-hidden rounded-4xl bg-linear-to-br from-[#d9a066] via-[#b35d1f] to-[#6b2f12] shadow-xl shadow-[#d7aa7b]/30">
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_35%)]"></div>
+                    <div class="home-hero-tile relative h-72 overflow-hidden rounded-4xl">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_35%)]"></div>
                         <div class="absolute inset-0 flex items-end p-5">
                             <div class="rounded-2xl bg-black/35 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
                                 Add photo at public/images/home/hero-dish-1.jpg
@@ -38,7 +38,7 @@
                     </div>
 
                     {{-- Put your image here: public/images/home/hero-dish-2.jpg --}}
-                    <div class="relative mt-8 h-64 overflow-hidden rounded-4xl bg-linear-to-br from-[#fff4dd] via-[#f0d69b] to-[#d9a44f] shadow-xl shadow-[#d7aa7b]/30 sm:mt-0">
+                    <div class="home-hero-tile-alt relative mt-8 h-64 overflow-hidden rounded-4xl sm:mt-0">
                         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.45),transparent_40%)]"></div>
                         <div class="absolute inset-0 flex items-end p-5">
                             <div class="rounded-2xl bg-black/35 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
@@ -50,16 +50,16 @@
             </div>
         </section>
 
-        <section class="bg-[#f4ece2] px-6 py-16">
+        <section class="home-soft-section px-6 py-16">
             <div class="mx-auto max-w-7xl">
                 <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                     <div>
                         <h2 class="text-3xl font-black tracking-tight text-[#1f1a17]">Curated Recommendations</h2>
-                        <p class="mt-2 max-w-2xl text-sm leading-6 text-[#6c5f55]">
+                        <p class="mt-2 max-w-2xl text-sm leading-6 text-[#6f6257]">
                             End-picked spots known for exceptional quality and migrant-friendly pricing.
                         </p>
                     </div>
-                    <a href="#" class="font-semibold text-[#b46a1c]">View all</a>
+                    <a href="#" class="font-semibold text-[#9d5a13]">View all</a>
                 </div>
 
                 <div class="mt-10 grid gap-6 md:grid-cols-3">
@@ -68,7 +68,7 @@
                         ['name' => 'Abyssinia House', 'price' => '$12.00', 'caption' => 'A communal dining experience featuring hand-stretched injera.', 'image' => 'public/images/home/reco-2.jpg'],
                         ['name' => 'Patagonia Pantry', 'price' => '$4.00', 'caption' => 'The best flaky empanadas in town. Perfect for a quick bite.', 'image' => 'public/images/home/reco-3.jpg'],
                     ] as $card)
-                        <article class="overflow-hidden rounded-3xl bg-white shadow-[0_10px_30px_rgba(81,58,35,0.08)] ring-1 ring-black/5">
+                        <article class="home-card overflow-hidden rounded-3xl">
                             <div class="relative h-56 overflow-hidden bg-[#d9c6af]">
                                 {{-- Put your image here: {{ $card['image'] }} --}}
                                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.5),transparent_45%)]"></div>
@@ -97,7 +97,7 @@
 
         <section class="px-6 py-16">
             <div class="mx-auto max-w-7xl">
-                <h2 class="text-center text-3xl font-black tracking-tight text-[#1f1a17]">The Simple Path to Flavor</h2>
+            <h2 class="text-center text-3xl font-black tracking-tight text-[#1f1a17]">The Simple Path to Flavor</h2>
                 <div class="mt-14 grid gap-8 md:grid-cols-3">
                     @foreach ([
                         ['title' => 'Find', 'icon' => '⌕', 'text' => 'Search by location to see what is cooking nearby in your neighborhood.'],
@@ -105,7 +105,7 @@
                         ['title' => 'Feast', 'icon' => '⌘', 'text' => 'Follow the directions and enjoy a high-quality, affordable meal.'],
                     ] as $step)
                         <div class="text-center">
-                            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#f7d7b3] text-2xl text-[#b46a1c] shadow-sm">
+                                <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#f7d7b3] text-2xl text-[#9d5a13] shadow-sm">
                                 {{ $step['icon'] }}
                             </div>
                             <h3 class="mt-5 text-xl font-bold text-[#1f1a17]">{{ $step['title'] }}</h3>
@@ -116,7 +116,7 @@
             </div>
         </section>
 
-        <section class="bg-[#f4ece2] px-6 py-16">
+        <section class="home-soft-section px-6 py-16">
             <div class="mx-auto max-w-7xl">
                 <h2 class="text-3xl font-black tracking-tight text-[#1f1a17]">Trending Tastes</h2>
                 <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -126,7 +126,7 @@
                         ['name' => 'Miso Tonkotsu Ramen', 'label' => 'Popular', 'price' => '$13.00', 'image' => 'public/images/home/trending-3.jpg'],
                         ['name' => 'Classic Ahi Poke Bowl', 'label' => 'Fresh', 'price' => '$12.50', 'image' => 'public/images/home/trending-4.jpg'],
                     ] as $item)
-                        <article class="overflow-hidden rounded-3xl bg-white p-3 shadow-[0_10px_30px_rgba(81,58,35,0.08)] ring-1 ring-black/5">
+                        <article class="home-card overflow-hidden rounded-3xl p-3">
                             <div class="relative h-40 overflow-hidden rounded-[1.1rem] bg-[#d7c1a9]">
                                 {{-- Put your image here: {{ $item['image'] }} --}}
                                 <div class="absolute inset-0 flex items-end p-3">
@@ -140,7 +140,7 @@
                                     <h3 class="text-sm font-bold text-[#1f1a17]">{{ $item['name'] }}</h3>
                                     <span class="rounded-full bg-[#f6eadc] px-2.5 py-1 text-[11px] font-semibold text-[#8a5a2a]">{{ $item['label'] }}</span>
                                 </div>
-                                <p class="mt-2 text-xs font-semibold text-[#b46a1c]">{{ $item['price'] }}</p>
+                                <p class="mt-2 text-xs font-semibold text-[#9d5a13]">{{ $item['price'] }}</p>
                             </div>
                         </article>
                     @endforeach
@@ -152,7 +152,7 @@
             <div class="mx-auto max-w-7xl">
                 <h2 class="text-3xl font-black tracking-tight text-[#1f1a17]">Hidden Gems</h2>
                 <div class="mt-10 grid gap-5 lg:grid-cols-3">
-                    <article class="relative overflow-hidden rounded-[1.75rem] bg-[#5b3416] text-white shadow-[0_18px_40px_rgba(81,58,35,0.18)] lg:col-span-2 lg:row-span-2">
+                    <article class="home-gem-large relative overflow-hidden rounded-[1.75rem] text-white lg:col-span-2 lg:row-span-2">
                         <div class="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent"></div>
                         <div class="absolute inset-0 flex items-end p-6">
                             <div>
@@ -171,7 +171,7 @@
                         ['name' => 'Classic Diner', 'caption' => 'Comfort food with late-night service.', 'image' => 'public/images/home/gem-3.jpg'],
                         ['name' => 'Glaze Lab', 'caption' => 'Donuts and pastries with a modern twist.', 'image' => 'public/images/home/gem-4.jpg'],
                     ] as $gem)
-                        <article class="relative overflow-hidden rounded-[1.35rem] bg-[#d8c2a8] text-white shadow-[0_18px_40px_rgba(81,58,35,0.12)]">
+                        <article class="home-gem relative overflow-hidden rounded-[1.35rem] text-white">
                             <div class="absolute inset-0 bg-linear-to-t from-black/65 via-black/20 to-transparent"></div>
                             <div class="absolute inset-0 flex items-end p-5">
                                 <div>
@@ -193,7 +193,7 @@
                     Join 50,000+ travelers and migrants exploring the best local eats every day.
                 </p>
                 <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                    <a href="#" class="rounded-full bg-white px-6 py-3 font-semibold text-[#b46a1c] shadow-sm transition hover:bg-[#fff7ef]">Sign Up Free</a>
+                    <a href="#" class="rounded-full bg-white px-6 py-3 font-semibold text-[#9d5a13] shadow-sm transition hover:bg-[#fff7ef]">Sign Up Free</a>
                     <a href="#" class="rounded-full border border-white/60 px-6 py-3 font-semibold text-white transition hover:bg-white/10">Explore Map</a>
                 </div>
             </div>
@@ -226,8 +226,8 @@
                 <div>
                     <h4 class="font-bold text-[#1f1a17]">Connect</h4>
                     <div class="mt-4 flex gap-3">
-                        <span class="grid h-9 w-9 place-items-center rounded-full bg-[#f6eadc] text-[#b46a1c]">◎</span>
-                        <span class="grid h-9 w-9 place-items-center rounded-full bg-[#f6eadc] text-[#b46a1c]">@</span>
+                        <span class="grid h-9 w-9 place-items-center rounded-full bg-[#f6eadc] text-[#9d5a13]">◎</span>
+                        <span class="grid h-9 w-9 place-items-center rounded-full bg-[#f6eadc] text-[#9d5a13]">@</span>
                     </div>
                 </div>
             </div>
@@ -242,4 +242,3 @@
         </footer>
     </div>
 </x-layouts::app>
-</footer> 
