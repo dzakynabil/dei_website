@@ -27,24 +27,16 @@
                 </div>
 
                 <div class="grid gap-4 sm:grid-cols-2">
-                    {{-- Put your image here: public/images/home/hero-dish-1.jpg --}}
+                    {{-- Hero Dish 1 --}}
                     <div class="home-hero-tile relative h-72 overflow-hidden rounded-4xl">
+                        <img src="{{ asset('images/makanan1.png') }}" alt="Hero Dish 1" class="absolute inset-0 h-full w-full object-cover">
                         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_35%)]"></div>
-                        <div class="absolute inset-0 flex items-end p-5">
-                            <div class="rounded-2xl bg-black/35 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
-                                Add photo at public/images/home/hero-dish-1.jpg
-                            </div>
-                        </div>
                     </div>
 
-                    {{-- Put your image here: public/images/home/hero-dish-2.jpg --}}
+                    {{-- Hero Dish 2 --}}
                     <div class="home-hero-tile-alt relative mt-8 h-64 overflow-hidden rounded-4xl sm:mt-0">
+                        <img src="{{ asset('images/makanan1.png') }}" alt="Hero Dish 2" class="absolute inset-0 h-full w-full object-cover">
                         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.45),transparent_40%)]"></div>
-                        <div class="absolute inset-0 flex items-end p-5">
-                            <div class="rounded-2xl bg-black/35 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
-                                Add photo at public/images/home/hero-dish-2.jpg
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -64,19 +56,15 @@
 
                 <div class="mt-10 grid gap-6 md:grid-cols-3">
                     @foreach ([
-                        ['name' => 'Saigon Street Eats', 'price' => '$7.50', 'caption' => 'Authentic family recipes passed down through generations.', 'image' => 'public/images/home/reco-1.jpg'],
-                        ['name' => 'Abyssinia House', 'price' => '$12.00', 'caption' => 'A communal dining experience featuring hand-stretched injera.', 'image' => 'public/images/home/reco-2.jpg'],
-                        ['name' => 'Patagonia Pantry', 'price' => '$4.00', 'caption' => 'The best flaky empanadas in town. Perfect for a quick bite.', 'image' => 'public/images/home/reco-3.jpg'],
+                        ['name' => 'Saigon Street Eats', 'price' => '$7.50', 'caption' => 'Authentic family recipes passed down through generations.'],
+                        ['name' => 'Abyssinia House', 'price' => '$12.00', 'caption' => 'A communal dining experience featuring hand-stretched injera.'],
+                        ['name' => 'Patagonia Pantry', 'price' => '$4.00', 'caption' => 'The best flaky empanadas in town. Perfect for a quick bite.'],
                     ] as $card)
                         <article class="home-card overflow-hidden rounded-3xl">
                             <div class="relative h-56 overflow-hidden bg-[#d9c6af]">
-                                {{-- Put your image here: {{ $card['image'] }} --}}
+                                {{-- Card Image --}}
+                                <img src="{{ asset('images/makanan1.png') }}" alt="{{ $card['name'] }}" class="absolute inset-0 h-full w-full object-cover">
                                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.5),transparent_45%)]"></div>
-                                <div class="absolute inset-x-0 bottom-0 p-4">
-                                    <div class="rounded-2xl bg-black/35 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
-                                        Add photo at {{ $card['image'] }}
-                                    </div>
-                                </div>
                             </div>
                             <div class="p-5">
                                 <div class="flex items-start justify-between gap-4">
@@ -121,19 +109,15 @@
                 <h2 class="text-3xl font-black tracking-tight text-[#1f1a17]">Trending Tastes</h2>
                 <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
                     @foreach ([
-                        ['name' => 'Giant Indian Thali', 'label' => 'Top Seller', 'price' => '$9.99', 'image' => 'public/images/home/trending-1.jpg'],
-                        ['name' => 'Crispy Soy-Garlic Chicken', 'label' => 'Must Try', 'price' => '$11.50', 'image' => 'public/images/home/trending-2.jpg'],
-                        ['name' => 'Miso Tonkotsu Ramen', 'label' => 'Popular', 'price' => '$13.00', 'image' => 'public/images/home/trending-3.jpg'],
-                        ['name' => 'Classic Ahi Poke Bowl', 'label' => 'Fresh', 'price' => '$12.50', 'image' => 'public/images/home/trending-4.jpg'],
+                        ['name' => 'Giant Indian Thali', 'label' => 'Top Seller', 'price' => '$9.99'],
+                        ['name' => 'Crispy Soy-Garlic Chicken', 'label' => 'Must Try', 'price' => '$11.50'],
+                        ['name' => 'Miso Tonkotsu Ramen', 'label' => 'Popular', 'price' => '$13.00'],
+                        ['name' => 'Classic Ahi Poke Bowl', 'label' => 'Fresh', 'price' => '$12.50'],
                     ] as $item)
                         <article class="home-card overflow-hidden rounded-3xl p-3">
                             <div class="relative h-40 overflow-hidden rounded-[1.1rem] bg-[#d7c1a9]">
-                                {{-- Put your image here: {{ $item['image'] }} --}}
-                                <div class="absolute inset-0 flex items-end p-3">
-                                    <div class="rounded-2xl bg-black/35 px-3 py-2 text-[11px] font-semibold text-white backdrop-blur">
-                                        Add photo at {{ $item['image'] }}
-                                    </div>
-                                </div>
+                                {{-- Trending Item Image --}}
+                                <img src="{{ asset('images/makanan1.png') }}" alt="{{ $item['name'] }}" class="absolute inset-0 h-full w-full object-cover">
                             </div>
                             <div class="px-1 pb-1 pt-3">
                                 <div class="flex items-center justify-between gap-3">
@@ -153,6 +137,8 @@
                 <h2 class="text-3xl font-black tracking-tight text-[#1f1a17]">Hidden Gems</h2>
                 <div class="mt-10 grid gap-5 lg:grid-cols-3">
                     <article class="home-gem-large relative overflow-hidden rounded-[1.75rem] text-white lg:col-span-2 lg:row-span-2">
+                        {{-- Hidden Gem Large Image --}}
+                        <img src="{{ asset('images/makanan1.png') }}" alt="Artisan Hearth Bakery" class="absolute inset-0 h-full w-full object-cover">
                         <div class="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent"></div>
                         <div class="absolute inset-0 flex items-end p-6">
                             <div>
@@ -161,23 +147,23 @@
                                 <p class="mt-3 max-w-md text-sm leading-6 text-white/85">
                                     Famous for sourdough loaves that cost less than a coffee.
                                 </p>
-                                <p class="mt-4 text-xs text-white/70">Add photo at public/images/home/gem-1.jpg</p>
                             </div>
                         </div>
                     </article>
 
                     @foreach ([
-                        ['name' => 'Mumbai Express', 'caption' => 'Best vada pav in the tri-state area.', 'image' => 'public/images/home/gem-2.jpg'],
-                        ['name' => 'Classic Diner', 'caption' => 'Comfort food with late-night service.', 'image' => 'public/images/home/gem-3.jpg'],
-                        ['name' => 'Glaze Lab', 'caption' => 'Donuts and pastries with a modern twist.', 'image' => 'public/images/home/gem-4.jpg'],
+                        ['name' => 'Mumbai Express', 'caption' => 'Best vada pav in the tri-state area.'],
+                        ['name' => 'Classic Diner', 'caption' => 'Comfort food with late-night service.'],
+                        ['name' => 'Glaze Lab', 'caption' => 'Donuts and pastries with a modern twist.'],
                     ] as $gem)
                         <article class="home-gem relative overflow-hidden rounded-[1.35rem] text-white">
+                            {{-- Hidden Gem Small Image --}}
+                            <img src="{{ asset('images/makanan1.png') }}" alt="{{ $gem['name'] }}" class="absolute inset-0 h-full w-full object-cover">
                             <div class="absolute inset-0 bg-linear-to-t from-black/65 via-black/20 to-transparent"></div>
                             <div class="absolute inset-0 flex items-end p-5">
                                 <div>
                                     <h3 class="text-xl font-bold">{{ $gem['name'] }}</h3>
                                     <p class="mt-1 text-sm text-white/80">{{ $gem['caption'] }}</p>
-                                    <p class="mt-3 text-[11px] text-white/70">Add photo at {{ $gem['image'] }}</p>
                                 </div>
                             </div>
                         </article>
